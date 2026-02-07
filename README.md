@@ -14,3 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+<footer>
+    <p>© 2026 Mi Sitio Web - <a href="export.html">Política de Privacidad</a></p>
+</footer>
