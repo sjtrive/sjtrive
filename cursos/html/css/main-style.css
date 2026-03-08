@@ -1,0 +1,51 @@
+/*Comentarios en CSS, los comentarios no se podrán ver en el documento, para importar una oja de estilos se puede utilizar @import url("--");*/
+/*Configuracion Predeterminada*/
+html {
+   scroll-behavior: smooth;
+}
+body {
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+style
+/*Pagina Principal*/
+.back-page {
+   float: left;
+   font-size: 23px;
+   margin: 5px;
+   margin-bottom: 35px;
+}
+.next-page {
+   float: right;
+   font-size: 23px;
+   margin: 5px;
+   margin-bottom: 35px;
+}
+h1 {
+   font-size: 30px;  
+   text-align: center;
+   height: 38px; 
+   background-color: black;
+   border: solid;
+   border-bottom-style: double;
+   border-bottom-width: 12px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+.line {
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border: solid black 3px;
+   border-bottom: solid 3px;
+}
+.examples {
+   color: black;
+}
+
+/*Temario*/
+a:link {
+   text-decoration: transparent;
+}
+
+.volver {
+   float: right;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <script></script>
+   <link rel="stylesheet" href="css/main-style.css">
+   <link rel="stylesheet" href="css/style-css-basics.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Fundamentos de CSS</title>
+   <meta name="description" content="Aprendiendo CSS">
+</head>
+<header>
+   <a href="/index.html" class="back-page">⬅️</a>
+   <a href="/css-box-model.html" class="next-page">➡️</a>
+   <h1>Fundamentos de CSS</h1>
+   <nav id="temario">
+   <h2>Temario</h2>
+      <dd>
+         <details>
+            <summary><a href="css-basics.html#intro">Introducción Basica</a></summary>
+               <dd>
+                  <li><a href="css-basics.html#CSS-invocation">Invocación de CSS</a></li>
+                  <li><a href="css-basics.html#selectors">Selectores</a></li>
+                  <li><a href="css-basics.html#tags">Etiquetas</a></li>
+               </dd>
+         </details>
+      </dd>
+      <dd>
+         <details>
+            <summary><a href="">Tipos de selectores</a></summary>
+               <dd>
+                  <li><a href="css-basics.html#algoritmo">Algoritmo (revisar)</a></li>
+                  <li><a href="css-basics.html#reseteo-normalizacion">Reseteo y Normalización (revisar)</a></li>
+                  <li><a href="css-basics.html#prefijos">Prefijos de los navegadores (revisar)</a></li>
+                  <li><a href="css-basics.html#next-page">Modelo de Caja</a></li>
+               </dd>
+         </details>
+      </dd>
+   </nav>
+<hr>
+</header>
+<body>
+   <main><!--Invocación, Selectores y Etiquetas-->
+      <article id="intro">
+         <h2>Introducción Básica</h2>
+         <section id="CSS-invocation">
+            <h3>Invocación de CSS </h3>
+            <p>Para empezar a utilizar CSS siempre debemos bajo la etiqueta "head" poner una etiqueta llamada "link" colocar la dirreccion de nuestra hoja de estilos 
+               en el atributo "href", si utilizamos varias hojas ponemos varias etiquetas "link"</p>
+         </section>
+         <section id="selectors">
+            <h3>Selectores</h3>
+            <p>¿Que son los selectores? Bueno estos abarcan tres puntos</p>
+            <ol>
+               <li>Etiquetas - Se trabajan en html y pueden organizar el documento o hacer distintas funciones
+                  (Subrayar, Poner Imagenes y Videos, etc...)</li>
+               <li>Identificadores - Atributo ID - Pueden darle identificacion a una etiqueta para usarla despues</li>
+               <li>Clases - Atributo Class - Le dan una clase a una etiqueta la cual se puede utilizar en la hoja de
+                  estilos</li>
+            </ol>
+            <p>¿Que es un atributo? Un texto que va despues de una etiqueta dentro de la misma etiqueta.</p>
+         </section>
+         <section id="tags">
+            <h3>Etiquetas</h3>
+            <p>Hay muchas etiquetas que podamos utilizar, algunas son para realizar funciona como "img" para colocar
+               imagenes, algunas hacen
+               cambios en el documento, como "br" que produce saltos de linea, y algunas otras son para organizar
+               nuestra hoja internamente
+               como "nav".</p>
+         </section>
+         <a href="css-basics.html#temario" class="volver">⬆️</a><br>
+      </article>
+   <hr>
+      <article id="selector-type">
+         <h2>Tipos de Selectores</h2>
+         <section>
+            <h3>Selectores de hijos directos y descendientes</h3>
+            <p>En la hoja de estilos podemos poner un selector y > para poder aplicar esos estilos a una parte especifica de la clase, a eso se le llama hijos directos.
+               A los hijos descendientes se le hace los mismo pero sin ">" solo aplica a esa parte especifica de toda la clase. Como es especifico llega a diferencias cajas 
+               de linea con cajas de bloque.</p>
+         </section>
+         <section>
+            <h3>Selectores de hermanos</h3>
+            <p>signo de ~</p>
+            <ul>
+               <li class="hermanos-general"><b>Numero 1</b></li>
+               <li><b>Numero 2</b></li>
+               <li><b>Numero 3</b></li>
+            </ul>
+            <h3>Selectores de hermanos adyecentes</h3>
+            <p>Signo de +</p>
+            <ul>
+               <li class="hermanos-adyecentes"><b>Numero 1</b></li>
+               <Li><b>Numero 2</b></Li>
+               <li><b>Numero 3</b></li>
+            </ul>
+         </section>
+         <section>
+            <h3>Selectores Atributos</h3>
+            <p>Para no tener que hacer tantas clases se puede especificar algunos atributos de esa misma clase para que aplique valores y opciones a ciertos puntos <br>
+               El comodin del circunflejo hace que tome en cuenta las palabras inciales <br>
+               Y el comodin $ hace que se tomen en cuenta las palabras finales <br>
+               Exite el comodin ~ para que se tome en cuenta una palabra separada por esppacios <br>
+               Y el comodin | oara que se tome en cuanta una palabra separa por espacios y que despues pueda venir un - <br></p>
+            <i>Nota no olivdarse de los []</i>
+         </section>
+         <section>
+            <h3>Selector universal (*)</h3>
+            <p>El selector universar es bastante poderoso, se puede utilizar basicamente para seleccionar ya sea todo el documento o un todo de cada cosa, 
+               por ejemplo si quieres seleccionar todos los enlaces podrias poner (*a) esto aplicaria para cada etiqueta</p>
+         </section>
+         <a href="css-basics.html#temario" class="volver">⬆️</a><br>
+      </article>
+   </main>
+<hr>
+   <main><!--Pseudoclases y Pseudoelementos-->
+      <article id="style-specification">
+         <h2>Especificacion de Estilos</h2>
+         <section>
+            <h3>Pseudoclases (Volver a revisar)</h3>
+            <p>Las Pseudoclases son bastante complejas y se trabajan principalmente en CSS, para esta seccion tienes que ver la hoja de estilos</p>
+            <h3 class="examples">Ejemplos</h3>
+            <div class="section-pseudoclases">
+               <form class="form-pseudoclases">
+                  <input type="text" name="nombre" placeholder="Escribe aquí tu Nombre" required><br>
+                  <input type="email" name="correo" placeholder="Escribe aquí tu correo" required><br>
+                  <input type="submit">
+                  <input type="submit" disabled><br>
+               </form><br>
+               <div class="ejemplo-1"><a href="#ejemplo">Este enlace tiene estilos</a></div>
+               <p class="ejemplo-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur totam distinctio provident nobis? Suscipit praesentium exercitationem 
+                  iste repudiandae, molestias nostrum sequi aliquid, voluptatum ipsa laboriosam ducimus perspiciatis ab alias! Porro.</p>
+            </div>
+            <div class="ejemplo-3">
+               <b>Aquí voy a hacer unos textos todos tendran un subrayado cyan, excepto la italica, esto no lo haré de la forma tradicional, sino con un codigo -*:not(introducir clase)-</b><br>
+               <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere reiciendis dolor facilis ab harum? Nihil ab, qui fugiat, tempore, quam id architecto inventore molestias consequatur repellat numquam natus pariatur placeat.</i>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, nihil facere? Earum aliquid dignissimos architecto quos doloremque voluptatum exercitationem ut magnam deleniti culpa? Exercitationem omnis, blanditiis eum quae facilis neque?</p>
+               <a href="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quia explicabo possimus cumque? Ab doloribus ea natus, nesciunt modi cumque, id asperiores quod ducimus earum, ut laudantium sunt consectetur magnam.</a>
+            </div>
+         </section>
+         <section id="pseudoelementos">
+            <h3>Pseudoelementos</h3>
+            <p>Los Pseudoelementos son ayudas muy utiles a la hora de crear estilos, despues de colocar la clase ponemos "::" para referirnos a un Pseudoelemento en 
+               nuestra hoja de estilos con los Pseudoelementos podemos poner incluso contenido como emojis y algo mas en la pagina, ademas podemos color letras en 
+               especifico de un color o una linea completa sin necesidad de hacer tantas clases, especifica de cierto modo la clase, incluso si ustedes pueden notar se 
+               subrayarade diferente manera por el estilo que le he puesto al parrafo lorem, los Pseudoelementos tambien se pueden trabajar con otros tipos de etiquetas,
+               como ID, o selectores universales. En conclusion, ponemos una clase, y en la hoja de estilos podemos invocar esa clase y una pseudoclase que este dentro de la
+               clase, asi especificar a que parte del trabajo darle estilo sin necesidad de crear una clase para solo esa parte.</p>
+            <p class="ejemplo-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor magni delectus voluptas totam at? Numquam placeat molestiae eos harum optio voluptas perspiciatis, beatae aperiam ut autem labore, ipsam veritatis asperiores!</p>
+            <input class="ejemplo-5" type="text" name="nombre" placeholder="Placeholder">
+         </section>
+         <section id="agrupar-selectores">
+            <h3>Agrupar Selectores</h3>
+            <p>Ejemplo de formulario</p>
+            <form class="form-agrupar-selectores">
+               <input type="text" name="nombre" placeholder="Escribe tu nombre">
+               <input type="email" name="correo" placeholder="Escribe tu email">
+               <textarea name="comentarios" cols="30" rows="10" placeholder="Escribe tu comentario"></textarea>
+               <input type="submit">
+            </form>
+            <p>¿Que es lo que acabo de hacer? Bueno para este formulario no tuve que hacer cada estilo para cada clase,
+               si miras la hoja de estilos puedes ver
+               que hice una clase en el formulario y mencione los tipos de inputs a los que quiero poner la clase, dicho
+               de otra forma, llame los 3 formularios
+               y los dividi con comas para que tuvieran todos los mismos estilos.</p>
+         </section>
+         <a href="css-basics.html#temario" class="volver">⬆️</a><br>
+      </article>
+   </main>
+<hr>
+   <main id="footer">
+      <article>
+         <h2></h2>
+         <section id="algoritmo">
+            <h2>Algoritmo CSS (Volver a revisar)</h2>
+            <ul>
+               <li>La Cáscada</li>
+               <p>La cascada es el mecanismo en que el navegador aplica los estilos esto va a depender de los estilos
+                  del
+                  autor y de cuan especifico seas, afecta muchisimo el orden en que se ponen los estilos, y si chocan va
+                  a tomar en cuenta el
+                  primer estilo, son muy importantes por eso la lista de numeros que tenemos al lado izquierdo pues las
+                  ordenes que pongamos se
+                  tomaran en cuenta por su posicion en el html y en css</p>
+               <li>La Especifidad <p>El tema de la especifidad es parecido a la cascada mientras mas cerca este la orden
+                     que dimos es mucho mas
+                     confiable,por ejemplo, los estilos que se pueden hacer en el documento html con su comando son
+                     super confiables por que estan en
+                     el mismo documento no tendremos quiza la duda o el temor que nuestra hoja de estilos se desconecte,
+                     pero claro es peor hacer los
+                     estilos en el documento mas una hoja de estilos por que si interfieren las hojas va a tomar en
+                     cuenta primero siempre al documento,
+                     podemos ir mirando la especifidad.</p>
+               </li>
+               <li>La Herencia <p>La herencia lo que significa es que se pueden heredar valores de sus ancentros
+                     cercanos, como se mencionaba en los
+                     Selectores hijos, pero hay cosas que no se heredan y vamos a ir viendo, por ejemplo la familia
+                     tipografica se hereda, pero los
+                     colores de fondo no.</p>
+               </li>
+            </ul>
+         </section>
+         <a href="css-basics.html#temario" class="volver">⬆️</a><br>
+      </article>
+      <hr>
+      <article>
+         <section id="reseteo-normalizacion">
+            <h2>Reseteo y Normalización de estilos (Volver a revisar)</h2>
+         </section>
+         <a href="css-basics.html#temario" class="volver">⬆️</a><br>
+      </article>
+      <hr>
+      <article>
+         <section id="Prefijos">
+            <h2>Prefijos de los Navegadores (Volver a revisar)</h2>
+            <ul>
+               <li>Navegadores de Microsoft -ms-</li>
+               <li>Firefox -moz-</li>
+               <li>Todos los demás navegadores -webkit-</li>
+            </ul>
+         </section>
+         <a href="css-basics.html#temario" class="volver">⬆️</a><br>
+      </article>
+   </main>
+<hr>
+   <footer>
+      <a href="/css-box-model.html" class="next-page">➡️ Ir a la siguiente pagina</a>
+      <a href="/index.html" class="back-page">⬅️ Ir a la anterior pagina</a>
+   </footer>
+</body>
+</html>

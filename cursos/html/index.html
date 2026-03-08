@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="es">
+  <!--Lenguaje de la Pagina-->
+  <head>
+    <script src="js/codigos.js"></script>
+    <!--Links a hojas de codigos-->
+    <link rel="stylesheet" href="css/main-style.css" />
+    <!--Links a hojas de estilos-->
+    <link rel="stylesheet" href="css/style-index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentos de HTML</title>
+    <!--Titutlo de la pagina-->
+    <meta name="description" content="Aprendiendo HTML" />
+    <!--Descripcion de la pagina-->
+  </head>
+  <header>
+    <!--Cabecera-->
+    <a href="/index.html" class="trasparente">⬅️</a>
+    <a href="/css-basics.html" class="next-page">➡️</a>
+    <h1>Fundamentos de HTML</h1>
+    <nav id="temario">
+      <!--Temario-->
+      <h2>Temario</h2>
+      <dd>
+        <details>
+          <summary><a href="/index.html#intro">Introducción a HTML</a></summary>
+          <dd>
+            <li><a href="/index.html#etiquetas">¿Que son las Etiquetas?</a></li>
+            <li><a href="/index.html#encabezados">Encabezados</a></li>
+            <li>
+              <a href="/index.html#etiquetas-de-texto">Etiquetas de Texto</a>
+            </li>
+            <li>
+              <a href="/index.html#etiquetas-estructurales"
+                >Etiquetas Semanticas Estructurales</a
+              >
+            </li>
+            <li>
+              <a href="/index.html#etiquetas-block-inline"
+                >Etiquetas de bloque y de linea</a
+              >
+            </li>
+            <li>
+              <a href="/index.html#etiquetas-de-listas">Etiquetas de Listas</a>
+            </li>
+            <li>
+              <a href="/index.html#etiquetas-de-tabla">Etiquetas de Tabla</a>
+            </li>
+            <li><a href="/index.html#enlaces">Enlaces</a></li>
+          </dd>
+        </details>
+      </dd>
+      <dd>
+        <details>
+          <summary>
+            <a href="/index.html#media">Contenido Multimedia</a>
+          </summary>
+          <dd>
+            <li><a href="/index.html#images-gifs">Imagenes y GIFs</a></li>
+            <li><a href="/index.html#audio">Audio</a></li>
+            <li><a href="/index.html#video">Video</a></li>
+            <li><a href="/index.html#iframe">Iframes</a></li>
+          </dd>
+        </details>
+      </dd>
+      <dd>
+        <details>
+          <summary>
+            <a href="/index.html#interactive-elements"
+              >Elementos Interactivos</a
+            >
+          </summary>
+          <dd>
+            <li><a href="/index.html#button">Botones</a></li>
+            <li><a href="/index.html#box-model">Cajas Modales</a></li>
+            <li><a href="/index.html#accordions">Acordeones</a></li>
+          </dd>
+        </details>
+      </dd>
+      <dd>
+        <details>
+          <summary><a href="/index.html#forms">Formularios</a></summary>
+          <dd>
+            <li>
+              <a href="/index.html#forms-elements">Elementos de Formularios</a>
+            </li>
+            <li><a href="/index.html#input-attributes">Atributos Inputs</a></li>
+            <li>
+              <a href="/index.html#forms-examples">Ejemplos de formularios</a>
+            </li>
+            <li>
+              <a href="/index.html#select-radio-checkbox"
+                >Select, Radio and Checkbox</a
+              >
+            </li>
+          </dd>
+        </details>
+      </dd>
+    </nav>
+    <hr />
+    <style></style>
+  </header>
+  <body>
+    <main>
+      <!--Tema Principal o importante-->
+      <article id="intro">
+        <!--Articulo sobre un tema importante-->
+        <h2>Introducción al HTML</h2>
+        <section id="etiquetas">
+          <h3>¿Que son las etiquetas?</h3>
+          <p>
+            Las etiquetas son guías para organizar un documento o hacer
+            distintas funciones (Subrayar, Poner Imagenes y Videos, etc...) Para
+            todas las funciones que realicemos en html hay etiquetas, etiquetas
+            de salto de linea (br y hr) o etiquetas para organizar el documentos
+            como (header, section, o body) que le dan mas caracter al documento.
+            Durante este articulo veremos cada una de las etiquetas en que
+            momentos las podemos utilizar, la diferencia de una etiqueta de
+            linea y una de bloque
+          </p>
+          <img
+            class="encabezados"
+            src="media/img/encabezados-html.jpg"
+            alt="encabezados"
+          />
+        </section>
+        <section id="encabezados">
+          <!--Secciones subtemas-->
+          <h3>Encabezados</h3>
+          <p>
+            Hay seis encabezados con seis diferentes tamaños estos se distinguen
+            de un parrafo normal por que estan en negrita, las etiquetas son
+            (h1, h2, h3, h4, h5, h6) Dependiendo del tamaño varia el numero. A
+            los encabezados es común ponerles estilos, ya que se le puede
+            agrandar o cambiar el color, ponerle fondo, decoraciones, cambiar su
+            estilo de fuente, pero lo mejor es tener un solo "h1" por documento
+            html, el "h1" es el que más se utiliza para los encabezados, por lo
+            tanto si decoras tu encabezado y pones más etiquetas pues su estilo
+            seguirá siendo el mismo, asi que es mejor colocar solo uno con esos
+            estilos, además de qie esteticamente es mejor poner el titulo como
+            la letra más grande del articulo.
+          </p>
+        </section>
+        <section id="etiquetas-de-texto">
+          <h3>Etiquetas de Texto</h3>
+          <dt>Párrafo Normal</dt>
+          <b>Párrafo en negrita</b><br />
+          <i>Párrafo en cursiva</i><br />
+          <u>Párrafo subrayado</u><br />
+          <small>Párrafo pequeño</small><br />
+          <strong>Párrafo Importante</strong><br />
+          <em>Párrafo con Enfasis</em>
+          <pre>Párrafo de formateo</pre>
+          <blockquote>Párrafo para citas</blockquote>
+          <cite>- Cita</cite>
+        </section>
+        <section id="etiquetas-estructurales">
+          <img
+            src="media/img/estructura-HTML5.png"
+            alt="estructura-HTML5"
+            class="estructura-html"
+          />
+          <h3>Etiquetas semánticas estructurales</h3>
+          <dt>header - Cabecera de un sitio web o de una sección</dt>
+          <dt>nav - Representa una navegación</dt>
+          <dt>
+            main - Define la sección principal del documento, sólo puede existir
+            una etiqueta main por documento
+          </dt>
+          <dt>
+            article - Representa una sección autocontenido (que por sí sola se
+            explica)
+          </dt>
+          <dt>section - Representa una sección de contenido genérico</dt>
+          <dt>div - Es una etiqueta contenedora que no tiene semántica</dt>
+          <dt>aside - Representa contenido complementario o secundario</dt>
+          <dt>adress - Representa una información de contacto</dt>
+          <dt>footer - Pie de página de un sitio web o de una sección</dt>
+        </section>
+        <section id="etiquetas-formateo">
+          <h3>Etiqueta de formateo</h3>
+          <pre>
+Las etiquetas de preformateo lo que hacen es respetar y dejar exactemente el codigo escrito, con sus respectivos saltos de linea, o espacios, tambien tiene 
+                  un estilo de letra diferente, representando el codigo
+               </pre
+          >
+          <code
+            >Tambien hay una etiqueta llamada "code" la cual se especializa en
+            el codigo, tanto esta como la anterior eqtiqueta son ideales para
+            representar un codigo que necesitemos en nuestro sitio web.
+          </code>
+        </section>
+        <img
+          class="inline-block"
+          src="media/img/2-diferencia-bloque-en-linea.jpg"
+          alt=""
+        />
+        <section id="etiquetas-block-inline">
+          <h3>Etiquetas de bloque y de linea</h3>
+          <p>
+            En html tenemos un asunto, son las etiquetas de bloque y de linea,
+            las etiquetas de bloque lo que haces es ocupar todo el espacio
+            horizontal que puedan, asi que no dejara poner elementos a su lado,
+            mientras que la caja de linea ocupa solo el espacio necesario
+            permitiendo poner otros elementos simultaneamente, he aquí un
+            ejemplo de como se comportan, tienen sus ventajas y desventajas,
+            como que por ejemplo, las etiquetas de linea no se podrán utilizar
+            para poner imagenes a su lado.
+          </p>
+        </section>
+        <section id="etiquetas-de-listas">
+          <h3>Etiquetas de Listas</h3>
+          <p>
+            Tenemos una serie de etiquetas que nos ayudaran a crear listas como
+            los ejemplos a continuación, los programadores dividen estas
+            etiquetas en dos grupos: listas ordenadas (ol) y listas desordenadas
+            (ul), aunque en realidad el que hace estas filas es la etiqueta
+            (li). Hay muchas funciones, desde hacer una lista normal con
+            numeros, una lista con letras, numeros romanos, editar en que numero
+            o letra comienza cada lista, o si lo queremos a la inversa. Por otro
+            lado en las listas desordenadas tambien hay diferentes tipos de
+            formas para identificar los puntos de la lista. Tambien hay un tipo
+            de lista que podriamos considerar como un grupo aparte, son las
+            listas de definición, y como su nombre lo indica nosotros podemos
+            definir lo que dicen las listas
+          </p>
+          <h4>Listas Ordenadas</h4>
+          <ol>
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Extraterrestre</li>
+          </ol>
+          <ol start="6">
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+          </ol>
+          <ol reversed>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+          </ol>
+          <ol type="I">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+          </ol>
+          <h4>Listas desordenadas</h4>
+          <ul>
+            <li>Pimar</li>
+            <li>Am r</li>
+            <li>AS</li>
+            <li>ZZ</li>
+          </ul>
+          <ul type="circle">
+            <li>A</li>
+            <li>C</li>
+            <li>V</li>
+          </ul>
+          <ul type="square">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+          </ul>
+          <h4>Listas de definición</h4>
+          <dl>
+            <dt>HTML</dt>
+            <dd>
+              Lenguaje de marcado que define el contenido de una pagina web
+            </dd>
+            <dt>CSS</dt>
+            <dd>Define el diseño y estilo de esa pagina web</dd>
+            <dt>JS</dt>
+            <dd>Es el lenguaje de la web con sus respectivos codigos</dd>
+          </dl>
+        </section>
+        <section id="etiquetas-de-tabla">
+          <h3>Etiquetas de Tablas</h3>
+          <p>
+            Las tablas se podrian asemejar de cierta manera a las listas, es muy
+            sencillo hacerla y constara de dos partes, la primera donde defines
+            las columnas y finalmente ponemos el contenido de la tabla, la tabla
+            se puede hacer directamente con sus respectivos añadidos, (thead)
+            que lo que hace es poner en negrita el titulo de la tabla
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th colspan="3">Tabla de hermanos</th>
+              </tr>
+              <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Steven</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Jhon</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>Tatiana</td>
+                <td>25</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="enlaces">
+          <h3>Enlaces</h3>
+          <p>
+            Queremos poner algunos enlaces en nuestra pagina web para poder ya
+            sea enlazar nuestra pagina web con nuestras redes o organizar varias
+            paginas, ¿Como se hacen estos enlaces tan importantes? Gracias a la
+            etiqueta "a" ponemos los enlaces a una pagina y ponemos algún texto
+            o imagen que aparezca en la pagina web y así hacer visible el
+            enlace, dandole click funcionara de manera normal, por otro lado
+            tenemos más opciones con los enlaces, podemos hacer un temario con
+            esos enlaces para tener una navegacion fluida en la pagina, o
+            redirigirlo a algo de nuestra misma pagina web y con la opcion
+            "target: blank" podemos hacer que se abra una pagina en blanco y en
+            esa pagina se abra el enlace, asi se distingue un enlace a nuestra
+            pagina web o ha paginas externas
+          </p>
+          <a href="">Enlace <e> </e>jemplo</a> <br />
+          <a href="https://www.jw.org/es/" target="_blank">Enlace externo</a>
+        </section>
+        <a class="volver" href="/index.html#temario">⬆️</a><br />
+      </article>
+    </main>
+    <hr />
+    <main>
+      <article id="media">
+        <h2>Contenido Mutimedia</h2>
+        <p>
+          Al igual que otros lugares aqui podemos poner contenido multimedia,
+          imagenes, videos, gif, audio. Para esto existen las etiquetas
+          respectivas donde te pediran la ubicacion de esa imagen que quieres
+          poner, le puedes poner dimensiones de alto y ancho, tambien una
+          pequeña descripcion de lo que se va a mostrar, y por ultimo para
+          contenido que se puede reproducir se necesita poner un atributo
+          llamado controls, que hace que se pueda reproducir el audio o video.
+        </p>
+        <section id="images-gifs">
+          <h3>Imagenes y Vectores</h3>
+          <br />
+          <img src="media/img/fotos-gratis-de-stock-1.jpg" alt="Fotografia" />
+          <img src="media/img/chip-fast-fastfood-svgrepo-com.svg" alt="" />
+          <h3>GIF</h3>
+          <br />
+          <img
+            class="gif"
+            src="media/img/bd8ee824a73f0be13d0d5e084a22ac71.gif"
+            alt="gif"
+            width="50%"
+            height="500px"
+          />
+          <img
+            class="gif2"
+            src="media/img/41dd3d79f7606ae874882eb4041f4880.gif"
+            alt="gif"
+            width="50%"
+            height="500px"
+          />
+        </section>
+        <section>
+          <h3>Figuras</h3>
+          <figure>
+            <img width="100%" src="media/img/tabla-periodica2.png" alt="" />
+            <figcaption>
+              La diferencia entre una figura y una imagen es que con la figura
+              podemos añadir estas notas al pie de la imagen
+            </figcaption>
+          </figure>
+        </section>
+        <section id="audio">
+          <h3>Audio</h3>
+          <br />
+          <audio src="media/osg_S_001.mp3" controls preload="auto"></audio>
+        </section>
+        <section id="video">
+          <h3>Video</h3>
+          <br />
+          <video
+            src="media/y2mate.com - 10 COSAS RARAS que hacen los GATOS_1080p.mp4"
+            controls
+            width="700px"
+            height="400px"
+            poster="media/img/depositphotos_408490104-stock-photo-portrait-of-a-beautiful-lion.jpg"
+          ></video>
+        </section>
+        <section id="iframe">
+          <h3>Iframes</h3>
+          <iframe
+            class="IframeVideo"
+            src="https://www.youtube.com/embed/-oK6zL01fNM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="JonPage"
+            src="https://jonmircha.com/"
+            frameborder="0"
+          ></iframe>
+          <iframe
+            class="Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224444.69655823844!2d-81.48309479054228!3d28.48110106589686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e773d8fecdbc77%3A0xac3b2063ca5bf9e!2sOrlando%2C%20Florida%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1649900575652!5m2!1ses-419!2sco"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </section>
+        <a class="volver" href="/index.html#temario">⬆️</a><br />
+      </article>
+    </main>
+    <hr />
+    <main>
+      <article id="interactive-elements">
+        <h2>Elementos interactivos</h2>
+        <section id="button">
+          <h3>Botones</h3>
+          <button onclick="alert('Hola has click')">Button</button>
+        </section>
+        <section id="box-model">
+          <h3>Cajas Modales</h3>
+          <dialog open="">
+            Ventana modal en HTML (Esta todavia en desarollo)
+          </dialog>
+        </section>
+        <br /><br /><br />
+        <section id="accordions">
+          <h3>Acordeones</h3>
+          <details open>
+            <summary>Titulo del acordeon</summary>
+            <div>
+              <b>Contenido del acordeon</b>
+              <p>
+                Algo adicional que podemos poner en los acordeones es
+                mantenerlos abiertos, con la opción open en details.
+              </p>
+            </div>
+          </details>
+          <br />
+          <details>
+            <summary>Titulo del acordeon</summary>
+            <div>
+              <b>Contenido del acordeon</b>
+              <p>
+                Algo adicional que podemos poner en los acordeones es
+                mantenerlos abiertos, con la opción open en details.
+              </p>
+            </div>
+          </details>
+        </section>
+        <a class="volver" href="/index.html#temario">⬆️</a><br />
+      </article>
+    </main>
+    <hr />
+
+    <main>
+      <article id="forms">
+        <h2>Formularios</h2>
+        <section id="forms-elements">
+          <h3>Elementos de Formularios</h3>
+          <input type="text" placeholder="Input tipo Texto" /><br />
+          <input type="checkbox" />
+          <input type="radio" /><br />
+          <input type="date" /><br />
+          <input type="color" /><br />
+          <input type="button" name="Boton" id="" /><br />
+          <input type="submit" /><br />
+          <input type="reset" /><br />
+          <input type="file" /><br />
+          <input type="file" multiple /><br />
+          <input type="hidden" name="idioma" value="es" />(Input Oculto)<br />
+          <input type="email" placeholder="Input tipo Email" /><br />
+          <input type="number" placeholder="Input tipo Number" /><br />
+          <input type="tel" placeholder="Input tipo telefono" /><br />
+          <input type="password" placeholder="Input tipo Contraseña" /><br />
+          <input type="search" placeholder="Input tipo Busqueda" /><br />
+          <textarea
+            name="Tes"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Area para comentarios"
+          ></textarea
+          ><br />
+          <select name="select" id="">
+            <option value="" selected>Input de selección</option>
+            <option value="O1">Opción 1</option>
+            <option value="O2">Opción 2</option>
+            <option value="O3">(Esta permite una sola elección)</option>
+          </select>
+          <select name="select2" id="" multiple>
+            <option value="">Elección Multiple</option>
+            <option value="">Opción 1</option>
+            <option value="">Opción 2</option>
+            <option value="">Opción 3</option>
+          </select>
+        </section>
+        <section id="input-attributes">
+          <h3>Atributos Inputs</h3>
+          <input
+            type="text"
+            readonly
+            value="Este texto esta defninido y no se puede editar"
+          /><br />
+          <input
+            type="text"
+            readonly
+            disabled
+            value="Lo mismo que lo anterior, pero ademas se ve desabilitado"
+          /><br />
+          <input type="text" placeholder="Placeholder" /><br />
+        </section>
+        <section id="forms-examples">
+          <h3>Ejemplo de Formulario</h3>
+          <form action="https://www.jw.org/es/" method="post">
+            <!--GET es para que se vean los atributos, POST no los muestra-->
+            <label for="user">Usario:</label>
+            <input
+              type="text"
+              id="user"
+              name="user"
+              placeholder="Escribe tu Usuario"
+            />
+            <br />
+            <label>Contraseña:</label>
+            <input type="password" placeholder="Escribe tu Contraseña" /><br />
+            <input type="submit" name="contraseña" id="" /><br />
+            <input type="reset" name="" /><br />
+          </form>
+        </section>
+        <section id="select-radio-checkbox">
+          <h3>Select Radio and Checkbox</h3>
+          <form action="">
+            <p>Elige tu idioma</p>
+            <select name="idioma" required>
+              <option value="" selected>Elige una opción</option>
+              <option value="es">Español</option>
+              <option value="en">Inglés</option>
+              <option value="fr">Francés</option>
+              <option value="it">Italiano</option>
+              <option value="pt">Portugues</option>
+            </select>
+            <p>Lenguaje</p>
+            <input type="radio" name="lenguaje" id="" value="js" required />
+            <label for="">JavaSript</label>
+            <input type="radio" name="lenguaje" id="" value="py" required />
+            <label for="">Python</label>
+            <input type="radio" name="lenguaje" id="" value="php" required />
+            <label for="">PHP</label>
+            <p>Elige tus intereses</p>
+            <label for="">
+              <input type="checkbox" name="intereses" />
+              Deportes
+            </label>
+            <label for="">
+              <input type="checkbox" name="Messi" />
+              Messi
+            </label>
+            <label for="">
+              <input type="checkbox" name="Politica" />
+              Politica
+            </label>
+            <input type="submit" />
+            <input type="reset" />
+          </form>
+        </section>
+        <section>
+          <h3>Data Attributes</h3>
+
+          ???????????????????????????????????????????????????????????????
+        </section>
+        <a class="volver" href="/index.html#temario">⬆️</a><br />
+      </article>
+    </main>
+    <hr />
+    <footer>
+      <a href="/css-basics.html" class="next-page"
+        >➡️ Ir a la siguiente pagina</a
+      >
+    </footer>
+  </body>
+</html>

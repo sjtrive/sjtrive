@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <script></script>
+   <link rel="stylesheet" href="css/main-style.css">
+   <link rel="stylesheet" href="css/style-positions.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Posicionamiento CSS</title>
+   <meta name="description" content="Aprendiendo Posicionamiento en CSS">
+</head>
+<header>
+   <a href="css-box-model.html" class="back-page">⬅️</a>
+   <a href="css-colors.html" class="next-page">➡️</a>
+   <h1>Posicionamiento CSS</h1>
+   <nav id="temario">
+   <h2>Temario</h2>
+      <dd>
+         <details>
+            <summary><a href="/css-colors.html#intro">Introducción al Posicionamiento en CSS</a></summary>
+               <dd>
+                  <li><a href="/css-positions.html#positions">¿Que es el Posicionamiento en CSS?</a></li>      
+               </dd>   
+         </details>
+      </dd>
+   </nav> 
+   <hr>
+</header>
+<body>
+   <main>
+      <article id="intro">
+         <h2>Introducción al Posicionamiento en CSS</h2>
+         <section id="positions">
+            <h3>¿Que es el Posicionamiento en CSS?</h3>
+            <p>Como vimos en la pagina anterior la propiedad float nos permite modificar la posicion de una caja, con diferentes opciones, entre ellas
+               la de arriba abajo o derecha izquierda, y tambien nos permite editar el orden del documento html, la propiedad POSITION nos permite hacer 
+               algo parecido. Esta propiedad funciona de manera parecida a como se comportan los margenes</p>
+            <b>Al igual que en los anteriores esta propiedad tiene algunos tipos</b>
+            <ul>
+               <li>static (default) - Es el como dejar la caja o el elemento como esta sin cambiar su orden en el documento html</li>
+               <li>relative</li>
+               <li>absolute</li> 
+               <li>fixed - </li>
+               <li>sticky - </li>
+            </ul>
+            <b>Tenemos las propiedades de siempre: top, bottom, left, right. Pero se le suma index (Las propiedades top y left van a tener prioridad
+               sobre bottom y right)</b>
+            <ul>
+               <li>index - Lo que representa es la profundidad cual puede ir mas adelante cuando dos elementos se sobreponen, todo eso lo iremos viendo.</li>
+            </ul>  
+         </section>
+      </article>
+   </main>
+
+
+
+<article id="posicionamiento">
+    
+  </article>
+<hr>
+  <article id="static">
+    <h2>Posicionamiento Static</h2>
+    <p>Este es el valor por defecto, este respeta el flujo o el orden por el que va css, no cambia de posicion, entonces basicamente, no 
+      se puede posicionar, si miran el siguiente ejemplo notarán que aunque le he aplicado estilos y he intentando cambiarle de posicion
+      la propiedad static bloquea todos estos estilos.</p>
+    
+    <h3>Ejemplos</h3>
+    <div class="static">Esta es una caja estatica</div>
+    <a href="positions.html#temario" class="volver">⬆️</a></br>
+  </article>
+<hr>
+  <article id="relative">
+    <h2>Posicionamiento Relative</h2>
+    <p>El elemento se le pueden editar sus dimensiones, pero tambien conserva su posicion original o el flujo del documento, 
+      respeta su lugar en el documento, en el siguiente ejemplo verán como esta caja aunque se le añadieron diferentes dimensiones 
+      hay un espacio entre ejemplo, y la caja, ese es el espacio original de la caja, de hecho si comentas los estilos top & left veras que 
+      el espacio original esta ahí reservado</p>
+
+    <h3>Ejemplos</h3>
+      <div class="relative">Esta es una caja Relative</div> 
+      <span>👆</span>
+    <a href="positions.html#temario" class="volver">⬆️</a></br>
+  </article>
+<hr>
+  <article id="absolute">
+    <h2>Posicionamiento absolute</h2>
+    <p>El elemento pierde sus dimensiones y posicion original en el flujo del documento. Si se mueve toma como referencia 2 elementos: <br>
+      1) El primer ancestro con posicionamiento relativo <br>
+      2) Si no encuentra un ancestro relativo, se mueve con respecto del documento HTML</p>
+    
+    <h3>Ejemplos</h3>
+    <div class="absolute">Esto es una caja absolute, si en la hoja de estilos dejas de comentar la posicion, veras que se pone donde le dijimos</div>
+    <section class="relative-parents">
+      <div class="absolute-child">
+        Caja absoluta con ancestro relativo, Si quitas en CSS la propiedad top & left de "relative-parents", veras que este texto se sale de la 
+        caja Kakhi, esto pasa por que este elemento reconoce que es hijo y se limitan sus estilos a esta caja kakhi, y no a todo el documento. 
+      </div>
+    </section>
+    <a href="positions.html#temario" class="volver">⬆️</a></br>
+  </article>
+<hr> 
+  <article id="fixed">
+    <h2>Posicionamiento fixed</h2>
+    <p>El elemento pierde sus dimensiones y posicion original en el documento HTML, asi que no sigue esa linea por que se queda fijo, cuanto
+      se mueva el documento hacia arriba o hacia abajo, lo que pasa es que sigue pegado.</p>
+  
+    <h3>Ejemplos</h3>
+      <a href="positions/fixed.html">Link a Caja Fija</a>
+    <a href="positions.html#temario" class="volver">⬆️</a></br>
+  </article>
+<hr>
+  <article id="sticky">
+    <h2>Posicionamiento sticky</h2>
+    <p>Sticky es una combinacion de poisicionamiento relative y fixed, las propiedades top,left,bottom,right no mueven estos elementos,
+      además no puede ser hijo de otras etiquetas, para que funcione debe ser hijo directo del body. Ademas el centrado de una caja es normal,
+      basado en margin.</p>
+    
+    <h3>Ejemplos</h3>
+    <a href="positions/sticky.html">Link a Caja Sticky</a>
+    <a href="positions.html#temario" class="volver">⬆️</a></br>
+  </article>
+<hr>
+  <article id="z-index">
+    <h2>Posicionamiento Z-Index</h2>
+    <p>La sobreposicion se genera cuando dos elementos estan en un mismo lugar, por lo general el elemento que se hizo primero va a estar debajo,
+      pero la propiedad z-index nos permite modificar esto
+    </p>
+
+    <h3>Ejemplos</h3>
+    <a href="/positions/z-index.html">Link a Cajas Z-Index</a>
+    <a href="positions.html#temario" class="volver">⬆️</a></br>
+  </article>
+<hr>
+<a href="box-model.html" class="principal">⬅️ Volver a la pagina principal</a>
+<a href="positions-examples.html" class="positions">➡️ Ir a la siguiente pagina</a>
+</body>
+</html>

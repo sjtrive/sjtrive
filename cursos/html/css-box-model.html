@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <script></script>
+   <link rel="stylesheet" href="css/main-style.css">
+   <link rel="stylesheet" href="css/style-box-model.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modelo de caja en CSS</title>
+   <meta name="description" content="Aprendiendo Box Model CSS ">
+</head>
+<body>
+   <header id="title">
+      <a href="css-basics.html" class="back-page">⬅️</a>
+      <a href="css-positions.html" class="next-page">➡️</a>
+      <h1>Modelos de caja</h1>
+   </header>
+   <nav id="temario">
+      <h2>Temario</h2>
+      <ul>
+        <li><a href="box-model.html#estructura-de-caja">Estructura de un Modelo de Caja</a></li>
+        <li><a href="box-model.html#modelo-de-caja">Modelo de caja</a></li>
+        <li><a href="box-model.html#cajas-bloque-y-linea">Caja de bloque vs caja de línea</a></li>
+        <li><a href="box-model.html#display">Propiedad display</a></li>
+        <li><a href="box-model.html#visibility">Propiedad Visibility</a></li>
+        <li><a href="box-model.html#overflow">Propiedad Overflow</a></li>
+        <li><a href="box-model.html#box-sizing">Tamaño de Caja</a></li>
+        <li><a href="box-model.html#float-clear">Propiedad Float & Clear</a></li>
+        <li><a href="box-model.html#margenes-verticales">Colapso de margenes</a></li>
+        <li><a href="box-model.html#centrado">Centrado de Cajas</a></li>
+      </ul>
+   </nav>
+<hr>
+   <main id="caja">
+      <article id="que-es-una-caja">
+         <h2>¿Que es una caja?</h2>
+         <section id="estructura-de-caja">
+            <h3>Estructura de un Modelo de Caja</h3>
+            <div class="box-model">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus unde repellendus voluptates! Aut reiciendis necessitatibus et, velit non culpa tempora vero, ipsum ab rem officiis adipisci ratione, nobis quidem quam.</div>
+         </section>
+         <section id="modelo-de-caja">
+            <h3>Modelo de Caja</h3>
+            <p>Para html y css todo el contenido y cada etiqueta es como una caja y consta de:</p>
+            <ul>
+               <li>El contenido (content) que es lo que se ve en html por lo general texto</li>
+               <li>El borde (border) lo que delimita el contenido (Puedes poner un border solid para ver cual es)</li>
+               <li>El relleno (padding) las distancias internas o lo que hay entre el contenido y el borde</li>
+               <li>El margen (margin) es la distancia externa entre la caja y otras cajas </li>
+            </ul>
+            <p>En cuanto al padding y margin hay un pequeño atajo y es que por lo general deben llevar un valor que es el que les hace actuar 
+               por ejemplo ponerle 10 pixeles, si en nuestra hoja de estilos a ese valor se le agrega otro al lado se le aplicara a los lados, 
+               en resumen al primer valor se le aplicara arriba y abajo y el segundo valor lo aplicara a la derecha e izquierda y asi seguira 
+               entre mas valores pongan todos como la manecilla del reloj, valor 1, 2, 3, 4. Las cajas tienen cuatro lados:</p>
+            <ul>  
+               <li>Arriba (Top)</li>
+               <li>Derecha (Rigth)</li>
+               <li>Abajo (Bottom)</li>
+               <li>izquierda (Left))</li>
+            </ul>
+            <p>Estos cuatro lados sirven para especificar a que parte de la caja quieres ponerle un estilo. Ademas hablando de especificar se puede editar este caja con 
+               (width & Heigt) añadiendole sus respectivos tamaños. Tengo que recordar la importancia de distinguir las etiquetas:</p>
+            <ul>
+               <li>Border: Este es para representar que haya un borde, siempre debes tener este borde si quieres añadir un estilo 
+                  lo mejor es ponerlo en border-style</li>
+               <li>Border-width: Este es para ver como de ancho quieres el borde lo puedes medir por pixeles o por las medidas
+                  predeterminadas, thin, medium, tick.</li>
+               <li>Border-color: Con este le puedes dar color al borde y puede ser lo que estan nombrados ahi o con el codigo de color </li>
+            </ul>
+            <p>A las ultimas dos debemos recordar que tienen aun mas estilos por que es mas especifico, ya que cada lado es distinto, 
+                  lo que hace es juntar esos lados.</p>
+         </section>
+         <section id="cajas-bloque-y-linea">
+            <h3>Cajas de bloque vs caja de linea</h3>
+            <b>Cajas de línea</b>
+               <li>Ocupan solo el espacio necesario para mostrar el contenido </li>
+               <li>No tienen dimensiones modificables, se quedan como estan</li>
+               <li>Permiten otros elementos a su lado</li> <br>
+            <b>Cajas de bloque</b>
+               <li>Ocupan todo el ancho disponible</li>
+               <li>Sus dimensiones se pueden modificar</li>
+               <li>No permiten otros elementos a su lado</li><br>
+            <h3 class="examples">Ejemplos</h3><br>
+            <span class="caja-linea">Ejemplo de caja de linea</span>
+            <span>Lorem</span>
+            <div class="caja-bloque">Ejemplo de caja de bloque</div>  
+         </section>
+         <a href="box-model.html#temario" class="volver">⬆️</a><br> 
+      </article>
+   </main>
+<hr>
+   <main id="propiedades">
+      <h2>Propiedades</h2>
+      <section id="display">
+      <h3>Propiedad display</h3>
+      <p>Esta propiedad que le dice al navegador como se va a visualizar un elemento html a css, es muy extensa esa propiedad ya que va desde 
+         eliminar el contenido a ponerlo en linea en bloque o de diferentes formas:</p>
+      <ul>
+         <li>inline - obliga a la caja a ser caja de linea</li>
+         <li>block - obliga a la caja a ser caja de bloque</li>
+         <li>inline-block - Se comporta como un elemento de línea pero acepta modificar sus dimensiones (alto y ancho)</li>
+         <li>none - se oculta la caja pero se carga el contenido</li>
+         <li>table . se usa unicamente para las tablas (se agrega por defecto)</li>
+         <li>list-item - esta es la propiedad que se le da las lista (li) (Se agrega por defecto)</li>
+         <li>flex - ve mi curso de Flexbox CSS</li>
+         <li>grid - ve mi curso de Grid CSS</li>
+      </ul>
+      <h3 class="examples">Ejemplos</h3>
+      <b>Cajas inline, block, & inline-block</b>
+         <div class="box-block">Caja de bloque - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque fugiat velit ratione quis tenetur nisi, ut, enim nesciunt officia, voluptates sed? Odio labore tenetur obcaecati odit amet, voluptatem molestiae iste!</div>
+         <span class="box-line">Caja linea - Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatibus consequatur reprehenderit sequi? Distinctio eligendi consequuntur illo sunt dolor similique eaque optio, odit, perferendis repellat tempore magni est blanditiis eius.</span>
+         <span>A la caja de la izquierda no se le puede modificar sus dimensiones pero con la propiedad inline-block se pudo</span><br>
+      <b>La caja de abajo es una list item y se le agrega por defecto un pequeño margin</b>
+      <ul>
+         <li>Parrafo</li>
+         <li>Parrafo</li>
+         <li>Parrafo</li>
+      </ul>
+      <b>La tabla de abajo esta hecha con la propiedad table, y estas le dan forma a la tala</b>
+      <table>
+         <tr>
+         <td>celda 1</td>
+         <td>celda 2</td>
+         <td>celda 3</td>
+         </tr>
+         <tr>
+         <td>celda 1</td>
+         <td>celda 2</td>
+         <td>celda 3</td>
+         </tr>
+         <tr>
+         <td>celda 1</td>
+         <td>celda 2</td>
+         <td>celda 3</td>
+         </tr>
+      </table>
+      <a href="box-model.html#temario" class="volver">⬆️</a><br>
+      </section>
+      <section id="visibility">
+      <h3>Propiedad Visibility</h3>
+      <p>Si queremos en algun momento ocultar el elemento, lo mas rapido seria utilizar el display none, el problema con este es que aunque borra 
+         de cierta forma la caja, no se borra el contenido sigue cargando, consumiendo recursos. ¿Que podemos hacer? La propiedad Visibility tiene Estas
+         ayudas, ya que tiene su valor por defecto (visiible), pero tambien esta hidden, que lo que hace es como volverlo transparente se nota que hay una caja 
+         ahi pero no se ve.</p>
+      <h3 class="examples">Ejemplos</h3>
+      <p class="visibility">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sed unde maiores molestiae incidunt accusantium sit. Nemo officia corrupti impedit unde, accusantium, dignissimos fugit officiis vitae, perferendis totam obcaecati saepe.</p>
+      <a href="box-model.html#temario" class="volver">⬆️</a><br>
+      </section>    
+      <section id="overflow">
+         <h3>Propiedad overflow</h3>
+         <p>Overflow es el cambio que se le hace a lo que esta por fuera de la caja, es como la propiedad Visibility pero en vez de editar el contenido
+            lo que edita es lo que se sale de la caja, cuando por ejemplo el recuadro que le damos en css es muy pequeño, lo que hace overflow es editar
+            el contenido que se sale de la caja para que se pueda o no se pueda ver.</p>
+         <h3>Ejemplos</h3>
+         <p>La propiedad overflow al igual que las anteriores tiene sus distintos valores, por ejemplo visible, que es como deberia estar normalmente. </p>
+            <div class="overflow1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse magni voluptatibus est quisquam, autem vero optio incidunt minus, tempora aliquid harum explicabo? Quis pariatur ipsum voluptatem quibusdam veniam magni facere.</div><br><br><br><br><br>
+         <p>Tambien esta hidden como en la propiedad Visibility lo que hace es eliminar lo que hay por fuera de la caja.</p>
+            <div class="overflow2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse magni voluptatibus est quisquam, autem vero optio incidunt minus, tempora aliquid harum explicabo? Quis pariatur ipsum voluptatem quibusdam veniam magni facere.</div>
+         <p>Y la propiedad scroll, que lo que hace es eliminar lo que hay por fuera de la caja pero le pone barras de desplazamiento para que el contenido se vea pero 
+            ocupe menos espacio, el problema es que sea que necesite o no pone una barra de desplazamiento en la parte de abajo</p>
+            <div class="overflow3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam pariatur quasi explicabo, minima laudantium, sapiente consequuntur voluptatum illo nulla accusantium possimus eius nemo ullam repudiandae voluptas cupiditate, id laborum et!</div>
+         <p>La propiedad auto hace lo mismo que la propiedad scroll pero le aplica segun el texto si no necesita barra de desplazamiento horizontal
+            pues no se la pone</p>
+            <div class="overflow4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum temporibus deleniti tempore, asperiores dignissimos numquam vel minima nulla labore voluptatibus maxime voluptates sit, aspernatur sunt facilis incidunt porro distinctio architecto!</div>
+         <br><p>Estos procedimientos se pueden hacer incluso manual y especifico con la propiedad overflow x - overflow y</p>
+         <a href="box-model.html#temario" class="volver">⬆️</a><br>
+      </section>
+      <section id="float-clear">
+         <h3>Propiedad Float & Clear</h3>
+         <b>Float</b>
+         <p>La propiedad float nos va permitir cambiar la posición horizontal de las cajas, nos va permitir llevarlas a la izquierda o a la derecha
+            su valor por defecto es float none, pero podemos editarla para que flote a la izquierda con float:left o a la derecha con float:right.
+            ¿Que es lo que hacen exactamente? Buscar el lugar mas cercano a la derecha o a la izquierda, pero pierden el flujo del documento html, 
+            se les quita su posición natural, pierden el orden que se les da. <br>
+            Asi que tenemos un problema con el orden que le queremos dar las posiciones de html son como una fila de banco, cada contenido es como 
+            una persona, si una de esas personas sale de la fila de la derecha va a haber un problema pues estan intentando ocupar los dos una misma 
+            fila, obviamente esto no es un prolema si queremos hacerlo a posta, pero no es la mejor manera cuando necesitamos manejarlo de otra manera.
+            Es por eso que en el segundo ejemplo se le quita el color de fondo, por que aunque estan en el mismo div el contenido se sale del div por
+            el css, entonces esquivan el color de fondo, asi que es como si la div no tuviera nada dentro.</p>
+            <h4>Clear</h4>
+            <p>Con la propiedad clear se arregla el problema de la superposición</p>
+         
+         <h3 class="examples">Ejemplos</h3>
+         <b>Problema 1</b>
+         <div class="ejemplo9">
+            <section class="float-right">Este flota a la derecha</section>
+            <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, optio repellendus consequuntur vel, dolore corrupti illo assumenda est excepturi dolores quo iste incidunt sit quasi odio! Minus, vero. Illo, officiis?</section>
+            <section class="float-left">Este flota a la izquierda</section>
+         </div><br><br>
+         <b>Problema 2</b>
+         <div class="ejemplo10">
+            <section class="float-left">izquierda </section>
+            <section class="float-right">Derecha</section>
+         </div><br><br>
+         <b>Problema 3</b>
+         <div id="ejemplo11">
+            <span class="right"> Esto a la derecha </span>
+            <span class="left"> Esto a la izquierda </span>
+         </div>
+         <section>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident placeat, quam, voluptate deserunt, repellendus quia quas quod fuga excepturi dolores dolore quasi reprehenderit qui recusandae eum distinctio commodi omnis illum!</section>
+         <a href="box-model.html#temario" class="volver">⬆️</a><br>
+      </section>
+      <a href="box-model.html#temario" class="volver">⬆️</a><br> 
+   </main>
+
+
+
+      <article id="box-sizing">
+         <h2>Tamaño de Caja</h2>
+         <p>box-sizing: border-box (Para que el navegador cuente no solo el contenido sino el alrededor, ademas aplicando esta propiedad no es 
+            necesario hacer calculos o cuentas a una tabla como se muestra en el ejemplo 3)</p>
+         <p>box sizing: boder-content (el navegador cuenta solo el contenido)</p>
+
+         <h3>Ejemplos</h3>
+         <b>Border content</b>
+            <div class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non consectetur aperiam labore magni, est nulla asperiores nam suscipit ipsa molestiae, cum dolor architecto vitae, tempore delectus fugiat debitis itaque voluptas.</div>
+         <b>Border Box</b>
+            <div class="border-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, facilis aspernatur, doloribus numquam eos aut saepe fugit nesciunt labore ullam accusamus tempora veritatis! Nobis unde reiciendis quidem assumenda id dolore.</div>
+         <b>Border Table</b>
+            <div class="border-box2">
+            <sectien class="item">sección 1</sectien>
+            <sectien class="item">sección 2</sectien>
+            <sectien class="item">sección 3</sectien>
+            </div>
+      
+         <p>Para no tener que hacer este proceso en cada caja lo mejor es utilizar el codigo que dejare comentado en la hoja de estilos
+         <a href="box-model.html#temario" class="volver">⬆️</a></p>
+      </article>
+<hr>
+  <article id="margenes-verticales">
+    <h2>Colapso de margenes</h2>
+    <b>Verticales</b>
+    <p>Lo que significa es que los margenes no se suman, el ejemplo de abajo demuestra que aunque tienen ambos parrafos 16 pixeles de margenes
+    arriba y abajo estos no se suman, sino que se superponen, los margenes estan ahi pero estan puestos encima del otro</p>
+    <p>¿Cual es la solución a este problema? Bueno utilizar solo una de las propiedas, no tener margin top y margin bottom a la vez pues 
+    hacen el mismo efecto cuando estan en fila en la pagina, de hecho si quitas en la hoja de estilos uno de las propiedades (sea top o bottom)
+    en esta pagina no va a cambiar nada en absoluto</p>
+    
+    <b>Horizontales</b>
+    <p>En cambio de los margenes verticales, estos margenes horizontales si se suman entre si, como se ve en el siguiente ejemplo</p>
+
+    <h3>Ejemplos</h3>
+    <b>Margenes Verticales</b>
+    <div class="margin-colapse">
+      <section>Seccion 1</section>
+      <section>Seccion 2</section>
+    </div> <br>
+    <b>Margenes Horizontales</b>
+    <div class="margin-colapse-horizontal">
+        <section>
+          <span>Span 1</span>
+          <span>Span 2</span>
+          <span>Span 3</span>
+        </section>
+    </div>
+    <a href="box-model.html#temario" class="volver">⬆️</a></br>
+  </article>
+<hr>
+  <article id="centrado">
+    <h2>Centrado de cajas</h2>
+    <p>Si queremos centrar una caja como se ve en diferentes sitios web en donde dejas espacios a la izquierda y derecha para poner anuncios,
+      lo que debemos es usar la propiedad margin para que mueva la caja en el exterior, es importante no confundirse con la propiedad text aling center,
+      que centra el texto de la caja pero no la caja en sí. <br>
+      La propiedad es "margin-left:auto & margin-right:auto" se utilizan ambas. Lo que hacer es empujar la caja a los respectivos lados, 
+      pero como utilizamos left & ritgh al mismo tiempo lo que hacen es chocar y quedarse en el centro, 
+    </p>
+    <div class="centrado">
+      <header>Cabecera</header>
+      <main>Contenido principal</main>
+      <footer>Pie de página</footer>
+    </div>
+    <a href="box-model.html#temario" class="volver">⬆️</a></br>
+  </article>
+<hr>
+   <footer>
+      <a href="index.html" class="previus-page">⬅️ Volver a la pagina principal</a>
+      <a href="positions.html" class="next-page">➡️ Ir a la siguiente pagina</a>
+   </footer>
+</body>
+</html>

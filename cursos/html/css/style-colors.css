@@ -1,0 +1,49 @@
+/*HTML Basics*/
+/*Config*/
+.back-page {
+   float: left;
+   font-size: 23px;
+   margin: 5px;
+   margin-bottom: 35px;
+}
+.next-page {
+   float: right;
+   font-size: 23px;
+   margin: 5px;
+   margin-bottom: 35px;
+}
+h1 {
+   color: purple;
+   border-color: purple;
+}
+h2 {
+   color:  purple;
+}
+h3 {
+   color: purple;
+}
+h4 {
+   color: #2D9601;
+}
+a:hover {
+   color: purple;
+}
+.line {
+   border-bottom-color: purple;
+}
+a {
+   color: #2D9601;
+}
+a:visited {
+   color: #2D9601;
+}
+hr {
+   border-bottom-color: purple;
+}
+
+/*Colores por nombre*/ 
+.colors-name {
+  background-color: coral;
+  border: cyan solid;
+  color: turquoise;
+}

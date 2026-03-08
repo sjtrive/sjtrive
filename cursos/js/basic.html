@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="console.js" />
+    <link rel="stylesheet" href="basic.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentos JavaScript</title>
+  </head>
+  <body>
+    <h1>Fundamentos JavaScript</h1>
+    <hr />
+    <article>
+      <h2>Introducción</h2>
+      <section>
+        <h3>¿Qué es JavaScript?</h3>
+        <p>
+          JavaScript es un lenguaje de programación que se usa para crear
+          aplicaciones por medio de comandos. El unico lenguaje con el que
+          puedes hacer toda una aplicación de principio a fin es JavaScript ¿Por
+          qué? Porque JavaScript nace de los navegadores y al final en la
+          actualidad es la única tecnología aceptada por los mismos navegadores
+        </p>
+        <b>¿Qué se puede hacer con JavaScript?</b>
+        <ul>
+          <li>Diseño y desarrollo web</li>
+          <li>Videojuegos</li>
+          <li>Experiencias 3D, y Realidad Virtual</li>
+          <li>Controlar hardware</li>
+          <li>Aplicaciones híbridas y móviles</li>
+        </ul>
+        <p>
+          JavaScript no es Java, aunque ambos se relacionan con el mundo del
+          desarollo, JavaScript es un lenguaje de programación web y Java solo
+          se permite en moviles
+        </p>
+      </section>
+      <section>
+        <h3>Orden y Explicación de las cosas</h3>
+        <dd>Variables: Aquí puedes escribir el significado de un</dd>
+        <dd>
+          Valores: Se les llama así a lo que significan las palabras de una
+          variable
+        </dd>
+      </section>
+      <section>
+        <h3>Variables: VAR vs LET</h3>
+        <p>
+          La diferencia entre VAR y LET y la razón de que LET sea la opción más
+          recomendable, es que LET aplica los comandos solo en el bloque en el
+          que esté, por tanto si hacemos un bloque y modificamos las variables
+          esos cambios afectaran solo al bloque y el codigo principal quedará
+          intacto, esto es lo mismo para el global (window) LET solo aplicara
+          sus codigos en el bloque en el que esta, por tanto sus variables no
+          afectaran al global. En diferencia, cuando hacemos codigo con VAR
+          afectamos a todo el documento y al global tambien.
+        </p>
+      </section>
+      <section>
+        <h3>Constantes (const)</h3>
+        <b>¿En que momento utilizamos const?</b>
+        <p>
+          Cuando tengamos variables que no vayan a cambiar su valor durante el
+          flujo del documento. Si sabemos que esta variable la necesitamos
+          siempre con el mismo valor lo que hacemos es definirla como constante
+        </p>
+        <b>¿En que mas se diferencia const y let?</b>
+        <p>
+          Bueno, si intentamos dejar una variable sin valor con const va a
+          presentar un error, porque no puede haber variables vacías. Con let si
+          podemos dejar variables vacías, por que después podemos simplemente
+          añadir un valor a esa variable que pusimos.
+        </p>
+        <p>
+          Si queremos añadir elementos, tanto en const como en let se podrá, por
+          que no se esta cambiando el valor de la variable ¿Que significa
+          cambiar el valor? Significa que en esta parte del documento el valor
+          es numero, en esta parte del documento el valor es un texto y en esta
+          otra son colores. Esto no se podrá editar con const, se define cual
+          valor va a ser en todo el documento y tomando en cuenta ese valor se
+          pueden añadir o eliminar elementos, si es numeros se pueden añadir o
+          eliminar numeros, si es colores lo mismo
+        </p>
+      </section>
+      <h3>Resumen</h3>
+      <b>¿Cuando debemos utilizar var, let y const? </b>
+      <dt>El var lo dejamos de utilizar, es mejor cambiarlo a let.</dt>
+      <dt>Cuando sean valores que pueden cambiar utlizamos let.</dt>
+      <dt>
+        Si queremos tener una variable sin valor y después con el paso del
+        documento asignarle un valor utilizamos let.
+      </dt>
+      <dt>Con valores que no vayan a cambiar utilizamos const.</dt>
+    </article>
+    <hr />
+    <article>
+      <h2>Valores</h2>
+      <p>
+        Si queremos saber de que tipo de dato es una variable podemos colocar en
+        el .log, typeof
+      </p>
+      <section>
+        <h3>Cadenas de Texto (Strings)</h3>
+        <b>¿Que son las cadenas de texto?</b>
+        <p>
+          Es un valor basado en texto, un texto que esta encerrado en comillas,
+          simples o dobles.
+        </p>
+        <b>¿Que podemos hacer con las cadenas de texto?</b>
+        <p>
+          Mediante propiedades nos permiten hacer diferentes tareas como length
+          que lo que hace es contar todos los caracteres de una cadena de texto.
+          asi hay diferentes propiedades que podemos utilizar los cuales se
+          identificaran ya que llevarán siempre () al final
+        </p>
+        <b>¿Que es concatenar?</b>
+        <p>
+          Concatenar es un termino para referirse a unir o enlazar objetos, como
+          estamos en la seccion cadena de texto a lo que se referiere es unir
+          cadenas de texto. A la misma vez la Interpolición hace lo mismo pero
+          de una manera mas sencilla con otro tipo de comandos
+        </p>
+        <b>¿Para qué sirven las comillas invertidas?</b>
+        <p>
+          Con las comillas invertidas se puede hacer una concatenación mas
+          fluida y además permirira hacer cadenas de texto con saltos.
+        </p>
+      </section>
+      <section>
+        <h3>Numeros (Numbers)</h3>
+        <b>¿Que son los Numeros (Numbers)?</b>
+        <p>
+          Estos son valores especificamente para los numeros, funcionan igual
+          que las cadenas de texto, pero no se le añaden comillas
+        </p>
+        <b>¿Cual es la diferencia entre utilizar Number y Strings?</b>
+        <p>
+          Como dije Numbers es especificamente para Numeros, si ponermos en
+          Strings algun tipo de numero se podrá ver con normalidad, pero se le
+          identificará como texto, ahora hay distintas propiedades que le
+          podemos aplicar a los Numbers, por ejemplo sumarlos, si hacemos el
+          mismo comando que la concatenación pero en vez de colocar los valores
+          en String sino en Numbers, podremos hacer una suma de Numeros
+        </p>
+      </section>
+      <section>
+        <h3>Booleanos (Booleans)</h3>
+        <b>¿Que son los Booleanos (Booleanos)?</b>
+        <p>
+          Aunque parezcan textos o numeros no son ni lo uno ni lo otros, solo
+          tenemos dos opciones para aplicar: true o false.
+        </p>
+      </section>
+    </article>
+    <hr />
+    <article>
+      <h2>Compuestos?</h2>
+      <section>
+        <h3>Objetos</h3>
+        <p>
+          En JavaScript todo se basa en esto, las cosas que hacemos son objetos
+        </p>
+      </section>
+      <section>
+        <h3>Funciones</h3>
+        <b>¿Qué es una "función"?</b>
+        <p>
+          Es un bloque de codigo que se define una sola vez, se puede reservar y
+          ejecutar en cualquier otro momento y se puede hacer en repetidas
+          ocasiónes Además una función puede devolver valor
+        </p>
+        <b>Funciones Declaradas VS Funciones Expresada</b>
+        <p>
+          Las Funciones Declaradas puede invocarse en cualquier parte del codigo
+          sea antes o después de que nuestra función sea declarada y si nos
+          fijamos podemos verdadero el numero de linea en donde se esta haciendo
+          una función en la consola. Y la invocación que hacemos en realidad es
+          como un enlace a la declaración
+        </p>
+        <p>
+          Las Funciones Expresadas son funciones a las que se le ha asignado
+          como valor una variable, si invocamos esta función incluso antes de
+          que el codigo apareciera nos va a aparecer un error, pero es algo
+          bueno ya que te obligas a ser ordenado y hacer primero variables y
+          funciones
+        </p>
+        <b
+          >Es por eso Importante ordenar nuestro codigo, Declarar nuestras
+          variables y funciones primero, y después ejecutar nuestro codigo
+        </b>
+      </section>
+      <section>
+        <h3>Arreglos</h3>
+        <b>¿Que son los arreglos?</b>
+        <p>
+          Algo que podemos hacer es especificar que parte del arreglo queremos
+          poner, como vemos en el codigo, podemos definir que queremos imprimir
+          en la consola.
+        </p>
+      </section>
+      <section>
+        <h3>Operadores</h3>
+        <p>
+          Gracias a JavaScript podemos crear operaciones: suma, resta
+          multiplicación y división
+        </p>
+        <p>
+          Tambien se puede hacer una operación no muy conocida, es como la
+          división pero da como resultado el residuo de una división u se llama
+          el modulo
+        </p>
+        <b>Operadores relacionales</b>
+        <p>
+          Los operadores relacionales son para hacer comparaciones entre dos
+          datos numéricos, utilizando esta forma de hacer el calculo nos va a
+          lanzar en nuestra consola la respuesta a la operación dependiendo si
+          es verdadera o falsa. Aquí hay que tener en cuenta lo siguiente: = 1
+          igual es asignación de variable == 2 iguales es comparación de valores
+          === 3 iguales es comparación de tipo de dato y de valor ¿Lo mejor?
+          Hacer comparaciones con 3 signos de "=" pues estos no tendrán margen
+          de error en el flujo de nuestro código
+        </p>
+        <p>
+          También tenemos operaciones logicas, por ejemplo tenemos los
+          siguientes signos: <br />
+          ! = Not: Niega, es decir lo que es verdadero lo vuelve falso y
+          viceversa <br />
+          || = Or: Cuando tengo 2 o más condiciones, y al menos una se cumple
+          esta respuesta la validará <br />
+          && = And: Cuando tengo 2 o más condiciones, todas tienen que
+          cumplirse, es decir ser verdaderas para validarse.
+        </p>
+      </section>
+      <section>
+        <h3>Ciclos (Loops)</h3>
+        <b>Función: For</b>
+        <p>
+          for (inicialización de variable; condición; decremento o incremento) {
+          sentencias que ejecuta el for sentencias que ejecuta el for sentencias
+          que ejecuta el for}
+        </p>
+        <p>
+          Este tipo de ciclos es necesario agregarle un aumento o un decremento
+          pues se generaría un loop infinito
+        </p>
+      </section>
+      <section>
+        <h3>Manejo de errores</h3>
+        <b>Función: Try</b>
+        <p>
+          Una herramienta muy útil que podemos utilizar es el codigo "Try" el
+          cuál puede ser utilizado para encerrar todo nuestro codigo de js, lo
+          que nos va a permitir detectar y eliminar errores en nuestro cógido de
+          una manera más limpia
+        </p>
+        <p>
+          Son tres partes las que tiene esste codigo, la primera parte se conoce
+          como "try" en donde podemos poner y ejectuar nuestro código con
+          normalidad. La sugunda parte es el "Catch" el cuál se encargará de
+          detectar errores dentro de la sección anterior, y cargará un mensaje
+          de error que hayamos puesto. Y podemos imprimir en la consola cúal es
+          el error. Y la sección final que siempre se ejecutará al final de un
+          bloque try-catch (Este Finally es opcional).
+        </p>
+      </section>
+    </article>
+
+    <script>
+      // Variables: VAR vs LET
+      console.log("🔷 Variables (VAR y LET)");
+      var VAR = "VAR";
+      let LET = "LET";
+      console.log(VAR);
+      console.log(LET);
+      console.log(window.VAR);
+      console.log(
+        window.LET,
+        "La variable solo funciona en el bloque y no en el global"
+      );
+
+      //Ejemplo VAR vs LET
+      console.log("🔸Ejemplo VAR");
+      var musica = "(POP)";
+      console.log("Variable fuera del bloque", musica);
+      {
+        var musica = "(JAZZ)";
+        console.log("Variable dentro del bloque", musica);
+      }
+      console.log("Variable después del bloque", musica);
+
+      console.log("🔸Ejemplo LET");
+      let musica2 = "(POP)";
+      console.log("Variable fuera del bloque", musica2);
+      {
+        let musica2 = "(JAZZ)";
+        console.log("Variable dentro del bloque", musica2);
+      }
+      console.log("Variable después del bloque", musica2);
+
+      //Constantes (const)
+      console.log("");
+      console.log("🔷 Constantes (const)");
+      const PI = 3.1416;
+      console.log(PI);
+      /*PI = 3.15 - No se puede cambiar el valor, al intentarlo se nos presentara error*/
+
+      //Ejemplo Const
+      console.log("🔸Ejemplo Const");
+      const objeto = { nombre: "Steven", edad: 15 };
+      const colores = ["blanco", "negro", "azul"];
+      console.log(objeto);
+      console.log(colores);
+      objeto.correo = "stevenjosu07@gmail.com";
+      colores.push("rojo");
+      console.log(objeto);
+      console.log(colores);
+
+      //Cadenas de Texto (Strings)
+      console.log("");
+      console.log("🔷 Cadenas de texto (Strings)");
+      let merkitayan = "henrikh mkhitaryan";
+      console.log("Caracteres del nombre merkitayan", merkitayan.length);
+
+      //Ejemplos de propiedades de cadenas de texto
+      console.log("🔸Ejemplo de metodos de cadenas de texto");
+      let nombre = "Steven";
+      let apellido = "Riveros";
+      console.log(nombre.toUpperCase(), apellido.toLowerCase());
+
+      //Ejemplo de Concanetación
+      console.log("🔸Ejemplo de concatenación en cadenas de texto");
+      let saludo = "Hi my name is " + nombre + " " + apellido + ".";
+      console.log(saludo);
+
+      //Ejemplo de Interpolición
+      console.log("🔸Ejemplo de intepolición en cadenas de texto");
+      let saludo2 = `Hola nuevamente, mi nombre es ${nombre} ${apellido}.
+      Y este
+            es
+               un
+                  salto
+                     de linea`;
+      console.log(saludo2);
+
+      //Numeros (Numbers)
+      console.log("");
+      console.log("🔷 Números");
+      let a = 1.34;
+      console.log(a.toFixed(3));
+      let b = 7.1263;
+      console.log(a + b);
+
+      //Booleanos (Booleans)
+      console.log("");
+      console.log("🔷 Booleans");
+      let verdadero = true;
+      let falso = false;
+      console.log(verdadero, falso);
+
+      //Funciones
+      console.log("");
+      console.log("🔷 Funciones");
+      function funcionxd() {
+        console.log("uno");
+        console.log("dos");
+        console.log("tres");
+      }
+      funcionxd();
+
+      //Funciones Editables
+      console.log("🔸Funciones Editables");
+      function saludar(nombre, edad) {
+        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+      }
+      saludar();
+      saludar("Jhon", 27);
+
+      //Funciones declaras VS Funciones expresadas
+      console.log("🔸Funciones declaradas VS Funciones expresadas");
+      function funcionDeclarada() {
+        console.log("Esta es una función declarada");
+      }
+      funcionDeclarada();
+      const funcionExpresada = function () {
+        console.log(
+          "Esto es una función expresada (No podrá ejecutarse antes de ser escrita)"
+        );
+      };
+      funcionExpresada();
+
+      //Arreglos
+      console.log("");
+      console.log("🔷 Arreglos");
+      let arreglo = [1, true, "Hi", ["A", "B", "C", [1, 2, 3]]];
+      console.log(arreglo);
+      console.log(arreglo[3][3][1]);
+
+      let arreglo2 = Array.of("X", "Y", "Z", 9, 8, 7);
+      console.log(arreglo2);
+
+      let arreglo3 = Array(10).fill(false);
+      console.log(arreglo3);
+
+      //push and pop
+      console.log("🔸Push and pop");
+      let colors = ["Amarillo", "Azul", "Rojo"];
+      console.log(colors);
+
+      colors.push("Negro");
+      console.log(colors);
+
+      colors.pop();
+      console.log(colors);
+
+      colors.forEach(function (el, index) {
+        console.log(`<li id= "${index}"> ${el} </li>}`);
+      });
+
+      //Operadores
+      console.log("");
+      console.log("🔷 Operadores");
+
+      //Operadores aritméticos (+ - * / %) Suma, Resta, Multiplicacion, Division, Modulo o diferencia
+      console.log("🔸Operadores (+-*/%)");
+      let suma1 = (5 + 5 - 10) * 3;
+      let suma2 = 5 + (5 - 10) * 3;
+      let modulo = 5 % 2;
+      console.log(suma1);
+      console.log(suma2);
+      console.log(modulo);
+
+      // Operadores relacionales (>, <, >=, <=, ==, ===, !=, !==)
+      console.log("🔸Operadores racionales (>, <, >=, <=, ==, ===, !=, !==)");
+      console.log(6 < 7);
+      console.log(8 > 8);
+      console.log(8 >= 8); /*Menor o igual*/
+      /*
+      = 1 Igual es asignación de variable
+      == 2 Iguales es comparación de valores
+      === 3 Iguales es comparación de tipo de dato y de valor
+      */
+      console.log("Abajo aplicando la regla del =");
+      console.log("7" == 7);
+      console.log(7 == 7);
+      console.log(0 == false); /*Ambos tienen un valor de falso*/
+
+      console.log(
+        "7" === 7
+      ); /*Va a ser falso pues no son del mismo tipo de dato*/
+      console.log(7 === 7);
+      console.log(0 === false);
+
+      // Operadores lógicos
+      console.log("🔸Operadores lógicos");
+      console.log(!true);
+      console.log(!false);
+      console.log(9 === 9 || "9" === 9);
+      console.log(9 === 9 && "9" === 9);
+
+      // If - Else
+      console.log("🔸If - Else");
+      let edad = 17;
+      if (edad > 17) {
+        console.log("eres mayor de edad");
+      } else {
+        console.log("eres menor de edad");
+      }
+      if (edad >= 18) {
+        console.log("eres mayor de edad");
+      } else {
+        console.log("eres menor de edad");
+      }
+
+      let hora = 1;
+      if (hora >= 0 && hora <= 5) {
+        console.log("Dejame dormir");
+      } else if (hora >= 6 && hora <= 11) {
+        console.log("Buenos días");
+      } else if (hora >= 12 && hora <= 18) {
+        console.log("Buenas tardes");
+      } else {
+        console.log("Buenas Noches");
+      }
+
+      // Operador Ternario
+      console.log("🔸Operador ternario");
+      let EresMayor = edad >= 18 ? "Eres mayor de edad" : "Eres menor de edad";
+      console.log(EresMayor);
+
+      // Switch - Case
+      let day = 6;
+      switch (day) {
+        case 0:
+          console.log("Domingo");
+          break;
+        case 1:
+          console.log("Lunes");
+          break;
+        case 2:
+          console.log("Martes");
+          break;
+        case 3:
+          console.log("Miercoles");
+          break;
+        case 4:
+          console.log("Jueves");
+          break;
+        case 5:
+          console.log("Viernes");
+          break;
+        case 6:
+          console.log("Sabado");
+          break;
+        default:
+          console.log("El día no existe");
+          break;
+      }
+
+      // Ciclos (Loops)
+      console.log("");
+      console.log("🔷 Ciclos (Loops)");
+
+      // While and Do While
+      console.log("🔸While and do while");
+      let contador = 0;
+      while (contador < 10) {
+        console.log("while" + contador);
+        contador++;
+      }
+      do {
+        console.log("do while " + contador);
+        contador++;
+      } while (contador < 10);
+
+      //For (Lo mismo que While and Do While pero abreviado)
+      console.log("🔸For");
+      for (let i = 0; i < 10; i++) {
+        console.log("for " + i);
+      }
+      let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+      for (let i = 0; i < numeros.length; i++) {
+        console.log(numeros[i]);
+      }
+
+      //Forin
+      console.log("- Forin -");
+      const sj = {
+        nombre: "Steven",
+        segundo: "Josue",
+        edad: 15,
+      };
+      for (const propiedad in sj) {
+        console.log(`Titulo: ${propiedad}, Valor: ${sj[propiedad]}'`);
+      }
+
+      //Forof
+      console.log("- Forof -");
+      for (const elemento of numeros) {
+        console.log(elemento);
+      }
+
+      let cadena = "Hola Mundo";
+      for (const caracter of cadena) {
+        console.log(caracter);
+      }
+
+      // Manejo de errores
+      console.log("");
+      console.log("🔷 Manejo de errores con TRY");
+      try {
+        console.log("En el try se agrega el código a evaluar");
+        console.log("Segundo mensaje para la consola en la sección try");
+      } catch (error) {
+        console.log(
+          "Catch, captura cualquier error surgido o lanzado en el try"
+        );
+        console.log(error);
+      } finally {
+        console.log(
+          "Este bloque se ejecutará siempre al final de un bloque try-catch"
+        );
+      }
+
+      console.log("🔸Ejemplo TRY");
+      try {
+        let numero = "y";
+
+        if (isNaN(numero)) {
+          throw new Error("El caracter introducido no es un Número");
+        }
+        console.log(numero * numero);
+      } catch (error) {
+        console.log(`Se produjo ${error}`);
+      }
+
+      // Break & Continue
+      console.log("");
+      console.log("🔷 Uso de Break & Continue");
+      console.log(
+        "El Break rompe el ciclo, el continue se salta la iteracción"
+      );
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+      for (let i = 0; i < numbers.length; i++) {
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>

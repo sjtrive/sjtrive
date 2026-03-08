@@ -1,0 +1,207 @@
+/*CSS Box Model*/
+/*Config*/
+.back-page {
+  float: left;
+  font-size: 23px;
+  margin: 5px;
+  margin-bottom: 35px;
+}
+.next-page {
+  float: right;
+  font-size: 23px;
+  margin: 5px;
+  margin-bottom: 35px;
+}
+h1 {
+   color: rgb(255, 157, 0);
+   border-color: rgb(255, 157, 0);
+}
+h2 {
+   color:  rgb(255, 157, 0);
+}
+h3 {
+   color: rgb(255, 157, 0);
+}
+h4 {
+   color: rgb(0, 98, 255);
+}
+a:hover {
+   color: rgb(255, 157, 0);
+}
+.line {
+   border-bottom-color: rgb(255, 157, 0);
+}
+a {
+   color: rgb(0, 98, 255);
+}
+a:visited {
+   color: rgb(0, 98, 255);
+}
+hr {
+   border-bottom-color: rgb(255, 157, 0);
+}
+
+/*Ejemplo modelo de caja*/
+.box-model {
+  background-color: rgb(255, 157, 0);
+  border: solid;
+  border-width: 5px;
+  border-color: black;
+  margin: 20px;
+  padding: 20px;
+}
+
+/*Caja de linea vs caja de bloque*/
+.caja-linea,
+.caja-bloque {
+  background-color: yellow;
+  width: 500px;
+  height: 250px;
+  border: medium solid black;
+  padding: 16px;
+}
+.caja-bloque {
+  margin: 32px;
+}
+.caja-linea {
+  margin: 48px;
+}
+
+/*Propiedad display*/
+.box-block,
+.box-line {
+  background-color: green;
+  border: 3px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 700px;
+  height: 100px;
+}
+.box-line {
+  display: inline-block;
+}
+
+/*Propiedad Visibility*/
+.visibility {
+  background-color: yellow;
+  width: 500px;
+  height: 250px;
+  border: medium solid black;
+  padding: 16px;
+  visibility: hidden;
+}
+
+/*Propiedad Overflow*/
+.overflow1 {
+  background-color: blueviolet;
+  width: 200px;
+  height: 100px;
+  overflow: visible;
+}
+.overflow2 {
+  background-color: blueviolet;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+.overflow3 {
+  background-color: blueviolet;
+  width: 200px;
+  height: 100px;
+  overflow: scroll;
+}
+.overflow4 {
+  background-color: blueviolet;
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+}
+
+/*Box Sizing*/
+.content,
+.border-box {
+  background-color: cadetblue;
+  border: solid medium black;
+  box-sizing: content-box;
+  padding: 20px;
+  margin: 20px;
+}
+.border-box {
+  box-sizing: border-box;
+}
+.border-box2 {
+  background-color: burlywood;
+  height: 300px;
+  width: 600px;
+  margin-top: 20px;
+}
+.border-box2 > * {
+  box-sizing: border-box;
+  border: thin red solid;
+  width: 200px;
+  padding: 10px;
+  float: left;
+}
+
+/*
+html {
+  box-sizing: border-box;
+}
+*, 
+*::before, 
+*::after {
+  box-sizing: inherit;
+}
+*/
+
+/*Float*/
+.ejemplo9 {
+  background-color: cornflowerblue;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.ejemplo10 {
+  background-color: yellow;
+}
+.right,
+.left {
+  float: right;
+  background-color: pink;
+}
+.left {
+  float: left;
+}
+
+/*Colapso de Margenes*/
+.margin-colapse {
+  background-color: darkcyan;
+}
+.margin-colapse section {
+  border: thin solid;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.margin-colapse-horizontal {
+  background-color: plum;
+}
+.margin-colapse-horizontal span {
+  border: thin solid;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+/*Centrado de cajas*/
+.centrado {
+  border: thin solid;
+  text-align: center;
+  background-color: thistle;
+  width: 800px;
+  height: 1000px;
+  padding: 18px;
+  margin-right: auto;
+  margin-left: auto;
+}

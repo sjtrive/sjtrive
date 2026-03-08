@@ -1,0 +1,132 @@
+/*CSS Basics*/
+/*Config*/
+.back-page {
+    float: left;
+    font-size: 23px;
+    margin: 5px;
+    margin-bottom: 35px;
+ }
+ .next-page {
+    float: right;
+    font-size: 23px;
+    margin: 5px;
+    margin-bottom: 35px;
+ }
+h1 {
+   color: rgb(0, 147, 255);
+   border-color: rgb(0, 147, 255);
+}
+h2 {
+   color:  rgb(0, 147, 255);
+}
+h3 {
+   color: rgb(0, 147, 255);
+}
+h4 {
+   color: orangered;
+}
+a:hover {
+   color: rgb(0, 147, 255);
+}
+.line {
+   border-bottom-color: rgb(0, 147, 255);
+}
+a {
+   color: orangered;
+}
+a:visited {
+   color: orangered;
+}
+hr {
+   border-bottom-color: rgb(0, 147, 255);
+}
+
+/*
+.examples {
+   background-color: rgb(0, 147, 255);
+   color: black;
+}
+*/
+
+
+
+
+/*Selectores de hermanos*/
+.hermanos-general ~ li {
+    background-color: pink;
+}
+.hermanos-adyecentes + li {
+    background-color: blueviolet;
+}
+
+/*Pseudoclases*/
+.form-pseudoclases *:required {
+    border-color: black;
+}
+.form-pseudoclases *:valid {
+    border-color: seagreen;
+}
+.form-pseudoclases *:invalid {
+    background-color: salmon;
+    border-color: red;
+}
+.form-pseudoclases *:focus {
+    background-color: lightskyblue;
+}
+.form-pseudoclases *:disabled {
+    background-color: pink;
+}
+.ejemplo-1 a:link {
+    color: blue;
+}
+.ejemplo-1 a:visited { 
+    color: purple;
+}
+.ejemplo-1 a:hover {
+    background: yellow;
+}
+.ejemplo-1 a:active { 
+    color: lime;
+}
+.ejemplo-2:hover {
+    font-size: 30px;
+}
+.article-pseudoclases p:first-of-type {
+    background-color: blueviolet;
+}
+.article-pseudoclases p:last-of-type {
+    background-color: palegreen;
+}
+.ejemplo-3 *:not(i, a){
+    background-color: silver;
+}
+
+/*Pseudoelementos*/
+.ejemplo-4::first-letter {
+    font-weight: bold;
+    font-size: 32px;
+    color: blue;
+}
+.ejemplo-4::first-line {   
+    color: coral;
+}
+.ejemplo-4::selection {
+    color: yellowgreen;
+    background-color: black;
+}
+.ejemplo-5::placeholder {
+    color: navy;
+}
+
+/*Agrupar Selectores*/
+.form-agrupar-selectores textarea,
+.form-agrupar-selectores input[type="email"], 
+.form-agrupar-selectores input[type="text"] {
+    border-color: yellow;
+    border-width: 2px;
+    border-style: dashed;
+    background-color: black;
+    font-size: 20px;
+    display: block;
+    width: 300px;
+}

@@ -1,0 +1,141 @@
+/*Configuracion*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Pagina Principal*/
+.back-page {
+  float: left;
+  font-size: 23px;
+  margin: 5px;
+}
+.next-page {
+  float: right;
+  font-size: 23px;
+  margin: 5px;
+}
+h1 {
+   font-size: 30px;
+   text-align: center;
+   height: 38px; 
+   color: greenyellow;
+   background-color: black;
+   border: solid;
+   border-bottom-style: double;
+   border-bottom-width: 12px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border: solid greenyellow double;
+  
+}
+h3 {
+  color: limegreen;
+}
+h3:hover {
+  background-color: black;
+}
+
+/*Temario*/
+a:link {
+  text-decoration: transparent;
+}
+a:visited {
+  color: blue;
+}
+a:hover {
+  color: greenyellow;
+}
+.volver {
+  float: right;
+}
+
+/*Posicionamiento Static*/
+.static {
+  background-color: yellow;
+  position: static;
+  top: 10px;
+  left: 10px;
+}
+
+/*Posicionamiento Relative*/
+.relative {
+  background-color: cadetblue;
+  position: relative;
+  width: 300px;
+  height: 50px;
+  top: 30px;
+  left: 100px;
+}
+
+/*Posicionamiento Absolute*/
+.absolute {
+  background-color: tomato;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  /*right: 0;
+  bottom: 0;
+  top: 100px;
+  left: 100px;*/
+}
+.relative-parents {
+  background-color: khaki;
+  position: relative;
+  width: 600px;
+  height: 100px;
+  top: 0px;
+  left: 550px;
+}
+.absolute-child {
+  background-color: lightcoral;
+  position: absolute;
+  width: 550px;
+  right: 0;
+  bottom: 0;
+}
+
+/*Posicionamiento Fixed*/
+.fixed {
+  color: white;
+  text-align: center;
+  background-color: navy;
+  position: fixed;
+  width: 500px;
+  height: 600px;
+  left: -250;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+}
+
+/*Posicionamiento Sticky*/
+.sticky {
+  background-color: lightskyblue;
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 10px;
+  position: sticky;
+}
+
+/*Propiedad Z-Index*/
+.z-index-1,
+.z-index-2 {
+  background-color: mediumaquamarine;
+  border: thin solid black;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.z-index-1 {
+  z-index: 1;
+}
+.z-index-2 {  
+  top: -200px;
+  left: 100px;
+}

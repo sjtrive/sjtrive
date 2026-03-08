@@ -448,6 +448,64 @@ body.cargando {
     padding-bottom: max(6rem, 10dvh);
   }
 }
+
+/* --- ESTILOS DEL DROPDOWN (SUBMENÚ) --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white);
+  padding: 10px 0;
+  list-style: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  border-radius: 5px;
+  flex-direction: column;
+  gap: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  color: var(--text-dark) !important;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.dropdown-menu a::after {
+  display: none; /* Oculta la línea roja decorativa en el submenú */
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--bg-light);
+  color: var(--primary) !important;
+}
+
+/* Ajuste móvil para el dropdown */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+    display: none;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+    align-items: center;
+  }
+}
+
 /* =========================================
    PÁGINAS LEGALES (Política de Privacidad)
    ========================================= */

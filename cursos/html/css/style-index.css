@@ -1,0 +1,93 @@
+/*HTML Basics*/
+/*Config*/
+.back-page {
+   float: left;
+   font-size: 23px;
+   margin: 5px;
+   margin-bottom: 35px;
+}
+.next-page {
+   float: right;
+   font-size: 23px;
+   margin: 5px;
+   margin-bottom: 35px;
+}
+h1 {
+   color: #FF0000;
+   border-color: #FF0000;
+}
+h2 {
+   color:  #FF0000;
+}
+h3 {
+   color: #C00000;
+}
+h4 {
+   color: #00C3FD;
+}
+a:hover {
+   color: #FF0000;
+}
+.line {
+   border-bottom-color: #FF0000;
+}
+a {
+   color: #00C3FD;
+}
+a:visited {
+   color: #00C3FD;
+}
+hr {
+   border-bottom-color: #FF0000;
+}
+
+/*Etiquetas en HTML*/
+.trasparente {
+   float: left;
+   font-size: 23px;
+   margin: 5px;
+   margin-bottom: 35px;
+   visibility: hidden;
+}
+#encabezados {
+   width: 1000px;
+}
+.encabezados {
+   float: right;
+   width: 250px;
+}
+.estructura-html {
+   float: right;
+   width: 220px;
+   height: 210px;
+}
+.inline-block {
+   float: right;
+   width: 600px;
+   margin-top: 10px;
+}
+/*Contenido Multimedia*/
+.gif:hover {
+   opacity: 0.5;
+   color: black;
+   width: 1200px;
+   height: 800px;
+}
+.gif2 {
+   float: right;
+}
+/*Elementos Interactivc*/
+.JonPage {
+   width: 34%;
+   height: 315px;
+   float: right;
+}
+.Map {
+   width: 32%;
+   height: 315px;
+}
+.IframeVideo {
+   width: 34%;
+   height: 315px;
+   float: left;
+}
